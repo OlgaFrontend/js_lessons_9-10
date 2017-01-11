@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/** Carousel **/
+
+img {
+	width: 600px;
+	height: 400px;
+}
+
+.wrapper {
+    /*height: 500px;*/
+    padding: 30px;
+    background-color: #F0EFE7;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}   
+
+.text-jcarousel {
+	color: #000; 
+	text-align: center;
+}
+
+/**Select**/
+
+.select {
+    height: 50px;
+}
+
+/**Checkbox with JQuery**/
+
+.decor_checkbox span input[type="checkbox"]{
+    display: none;
+}
+
+.decor_checkbox {
+    width: 100px;
+    clear: both;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.decor_checkbox span {
+    display: block;
+    float: right;
+    cursor: pointer;
+    width: 42px;
+    height: 17px;
+    background: url('../img/checkbox-sprite.png') no-repeat 0 0;
+    margin-right:10px;
+}
+
+.check_active span{
+    background-position: 0 -17px;
+}
+
+/**Checkbox with CSS**/
+
+input[type=checkbox] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.chCss {
+    cursor: pointer;
+}
+
+.chCss:after {
+    content: " ";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url('../img/checkbox-sprite.png');
+    position: relative;
+    top: 3px;
+    margin-left: 15px;
+}
+
+input[type=checkbox]:checked + .chCss:after {
+    background-position: 0 -17px;
+}
+
+.chCss:hover:after {
+    background-position: 0 -34px;
+}
+
+input[type=checkbox]:checked + .chCss:hover:after {
+    background-position: 0 -51px;
+}
+
+/**Menu**/
+
+
+nav {
+    background-color: #4E443C;
+    color: #fff;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    line-height: 60px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+nav ul li a {
+    display: block;
+    margin: 0 20px;
+    padding: 0 30px;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    color: #03A9F4;
+}
+
+.sub-menu {
+    display: none;
+}
+
+nav li ul {
+    position: absolute;
+    left: 0px;
+    top: 45px;
+    width: 190px;
+    background-color: #4E443C;
+}
+
+nav li.dropdown > a {
+    background-size: 18px;
+    background-image: url(../img/sortdown.png);
+    background-repeat: no-repeat;
+    background-position-x: 75px;
+    background-position-y: 22px;
+}
+
